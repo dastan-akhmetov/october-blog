@@ -7,7 +7,6 @@ use Model;
  */
 class Post extends Model
 {
-
     use \October\Rain\Database\Traits\Sluggable;
 
     /**
@@ -25,7 +24,20 @@ class Post extends Model
      */
     protected $fillable = [];
 
+    /**
+     * @var array Generate a slug from title
+     */
     protected $slugs = ['slug' => 'title'];
+
+    /**
+     * @var array Make translatable some fields
+     */
+    public $implement = ['RainLab.Translate.Behaviors.TranslatableModel'];
+
+    /**
+     * @var array List of translatable fields
+     */
+    public $translatable = ['title', 'text'];
 
     /**
      * @var array Relations
