@@ -1,0 +1,8 @@
+{% for post in posts %}
+    <h1>
+        <a href="/post/{{ post.slug }}">{{ post.title|_ }}</a>
+    </h1>
+    <p>{{ post.slug }}</p>
+    <p>{{ post.created_at }}</p>
+    <p>{{ post.text|raw|_ }}</p>
+{% endfor %}

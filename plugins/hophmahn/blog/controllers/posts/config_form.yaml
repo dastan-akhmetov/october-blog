@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Post
+
+# Model Form Field configuration
+form: $/hophmahn/blog/models/post/fields.yaml
+
+# Model Class name
+modelClass: Hophmahn\Blog\Models\Post
+
+# Default redirect location
+defaultRedirect: hophmahn/blog/posts
+
+# Create page
+create:
+    title: Create Post
+    redirect: hophmahn/blog/posts/update/:id
+    redirectClose: hophmahn/blog/posts
+
+# Update page
+update:
+    title: Edit Post
+    redirect: hophmahn/blog/posts
+    redirectClose: hophmahn/blog/posts
+
+# Preview page
+preview:
+    title: Preview Post
