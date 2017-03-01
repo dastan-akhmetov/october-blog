@@ -1,3 +1,6 @@
+[localePicker]
+forceUrl = 0
+==
 <!-- Nav -->
 <nav id="layout-nav" class="navbar navbar-inverse navbar-fixed-top navbar-autohide" role="navigation">
     <div class="container">
@@ -17,6 +20,9 @@
                 <li class="{% if this.page.id == 'ajax' %}active{% endif %}"><a href="{{ 'ajax'|page }}">AJAX framework</a></li>
                 <li class="{% if this.page.id == 'plugins' %}active{% endif %}"><a href="{{ 'plugins'|page }}">Plugin components</a></li>
             </ul>
+            <div class="navbar-form navbar-right">
+                {% component 'localePicker' %}
+            </div>
         </div>
     </div>
 </nav>
