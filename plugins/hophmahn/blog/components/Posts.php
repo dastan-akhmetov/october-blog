@@ -29,6 +29,10 @@ class Posts extends ComponentBase
     {
         $posts = Post::orderBy('id', 'desc')->get();
 
+        foreach ($posts as $post) {
+            $post->noFallbackLocale()->lang($this->page['activeLocale']);
+        }
+
         return $posts;
     }
 }

@@ -2,6 +2,8 @@
     <h1>
         <a href="/post/{{ post.slug }}">{{ post.title|_ }}</a>
     </h1>
-    <p>{{ post.created_at }}</p>
+    {% if post.title != null %}
+        <p>{{ post.created_at|_ }}</p>
+    {% endif %}
     <p>{{ post.text|raw|_ }}</p>
 {% endfor %}
