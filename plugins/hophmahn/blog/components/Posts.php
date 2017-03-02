@@ -27,7 +27,7 @@ class Posts extends ComponentBase
 
     public function loadPosts()
     {
-        $posts = Post::orderBy('id', 'desc')->get();
+        $posts = Post::orderBy('id', 'desc')->paginate(3);
 
         foreach ($posts as $post) {
             $post->noFallbackLocale()->lang($this->page['activeLocale']);
