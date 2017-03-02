@@ -1,3 +1,7 @@
 .DS_Store
 *.log
 .idea
+storage/cms/cache
+storage/cms/twig
+storage/framework/cache
+storage/framework/sessions
